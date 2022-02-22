@@ -1,0 +1,15 @@
+<body>
+    <div class="landing">
+        <h1 class="display-3 catch-phrase">Shake out town with your Events</h1>
+    </div>
+    <div    class="events">
+        <%@events.each do |event|%>
+            <div class="event">
+                <h1 class="display-5 event_title"><%=event.title%></h1>
+                <p><%=event.start_date%></p>
+                <p><%=event.price%></p>
+                <a href="<%=event_path%>">
+            </div>
+        <% end %>
+    </div>
+</body>

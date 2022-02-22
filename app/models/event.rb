@@ -1,29 +1,35 @@
 class Event < ApplicationRecord
-    validates :start_date, :duration, :title, :description, :price, :location, presence: true
-    validates :start_date, comparison: { greater_than: Time.new }
-    validates :duration, :check_duration
-    validates :title, length: {minimum:5, maximum:140}
-    validates :description, length: {minimum:20, maximum:1000}
-    validates :price, :right_price
+    before_validation :right_price, :must_be_futur, :right_duration
+    validates :location, presence: true
+    validates :start_date, presence: true
+    validates :duration, presence: true
+    validates :title, length: {minimum:5, maximum:140}, presence: true
+    validates :description, length: {minimum:20, maximum:1000}, presence: true
+    validates :price, presence: true
 
     has_many :participations
     has_many :participants, class_name: "User", through: :participations
     belongs_to :admin, class_name: "User"
 
-    def check_duration
-        unless self.duration % 5 == 0
+    def right_duration
+        if self.duration % 5 != 0
             errors.add(:duration, "must be multiple of 5")
         end
-        unless self.duration > 0
+        if self.duration < 0
             errors.add(:duration, "must be greater than 0")
         end
     end
     def right_price
-        unless self.price >= 0
+        if self.price <= 0
             errors.add(:price, "must be between 1 and 1000")
         end
-        unless  && self.price <= 1000
+        if self.price > 1000
             errors.add(:price, "must be between 1 and 1000")
+        end
+    end
+    def must_be_futur 
+        if self.start_date < Time.now
+            errors.add(:start_date, "must be in future")
         end
     end
 end

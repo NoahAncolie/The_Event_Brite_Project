@@ -1,15 +1,49 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.catch-phrase {
+    font-family: 'Noto Serif Display', serif;
+}
+
+.event_title {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    color: whitesmoke;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+
+.log_in-div {
+    width : 30%;
+    height : 70%;
+    background-color : #292929;
+    border-radius : 30px;
+    padding : 20px;
+    color : whitesmoke;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    box-shadow: -3px 3px 7px #3D3D3D, 3px -3px 7px #151515;
+}
+
+.log_in-div a {
+    color : #5BC3EB;
+    text-decoration: none;
+}
+
+.log_in-div a:hover, .log_in-div a:active {
+    color : #126D92;
+    text-decoration: none;
+}
+
+body {
+    background-color: #292929;
+}
+
+.bg-green {
+    background-color : #A63D40;
+    box-shadow : -3px 3px 7px #3D3D3D;
+}
