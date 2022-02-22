@@ -3,6 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.4'
 
+#CUSTON-GEMS
+gem 'devise'
+gem "dotenv-rails"
+gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
+gem 'table_print'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6', '>= 5.2.6.2'
 # Use postgresql as the database for Active Record
@@ -42,6 +50,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
