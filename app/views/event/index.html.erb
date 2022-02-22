@@ -1,15 +1,21 @@
-<body>
-    <div class="landing">
-        <h1 class="display-3 catch-phrase">Shake out town with your Events</h1>
+<header>
+    <div class="jumbotron jumbotron-fluid landing">
+        <div class="container ">
+            <h1 class="display-3 catch-phrase">Create wonderful Events</h1>
+        </div>
     </div>
-    <div    class="events">
+</header>
+<body>
+    <div    class="events container">
         <%@events.each do |event|%>
-            <div class="event">
-                <h1 class="display-5 event_title"><%=event.title%></h1>
-                <p><%=event.start_date%></p>
-                <p><%=event.price%></p>
-                <a href="<%=event_path%>">
+        <div class="card event" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%=event.title%></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Start the <%=event.start_date%></h6>
+                <p class="card-text">Cost £<%=event.price%></p>
+                <a href="event/<%=event.id%>" class="card-link">See event</a>
             </div>
+        </div>
         <% end %>
     </div>
 </body>
