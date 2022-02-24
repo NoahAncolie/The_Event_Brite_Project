@@ -1,126 +1,19 @@
-.catch-phrase {
-    font-family: 'Noto Serif Display', serif;
-}
-
-.event_title {
-    font-family: 'Open Sans Condensed', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, p, a {
-    color: whitesmoke;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-}
-
-.landing {
-    height : 60vh;
-    background-image: url('https://img5.goodfon.com/wallpaper/nbig/e/6a/balet-shchelkunchik-tanets.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    text-align: center;
-}
-
-.landing h1 {
-    border-top : solid 1px whitesmoke;
-    border-bottom : solid 1px whitesmoke;
-    position : absolute;
-    top : 70px;
-}
-
-.landing .container {
-    animation: 2.5s unfade;
-}
-
-.events {
-    border-top : solid 1px whitesmoke;
-    display : flex;
-    flex-wrap: wrap;
-}
-
-.event {
-    margin : 30px;
-    background-color: #292929;
-    border-radius: 10px;
-    box-shadow: -3px 3px 7px #3D3D3D, 3px -3px 7px #151515;
-}
-
-.event a:hover {
-    color : #A63D40;
-}
-
-.log_in-div {
-    width : 30%;
-    height : 70%;
-    background-color : #292929;
-    border-radius : 30px;
-    padding : 20px;
-    color : whitesmoke;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    margin: auto;
-    box-shadow: -3px 3px 7px #3D3D3D, 3px -3px 7px #151515;
-}
-
-.log_in-div a {
-    color : #5BC3EB;
-    text-decoration: none;
-}
-
-.log_in-div a:hover, .log_in-div a:active {
-    color : #126D92;
-    text-decoration: none;
-}
-
-body {
-    background-color: #292929;
-}
-
-.bg-green {
-    background-color : #A63D40;
-    box-shadow : -3px 3px 7px #3D3D3D;
-}
-
-.show-event {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.my-btn {
-    color : whitesmoke;
-}
-
-@keyframes unfade {
-    0% {opacity : 0%;}
-    100%{opacity : 100%;}
-}
-
-.edit-div {
-    width : 30%;
-    background-color : #292929;
-    border-radius : 30px;
-    padding : 20px;
-    color : whitesmoke;
-    position: relative;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    margin: auto;
-    box-shadow: -3px 3px 7px #3D3D3D, 3px -3px 7px #151515;
-}
-
-.edit-div a, .edit-div input {
-    color : #5BC3EB;
-    text-decoration: none;
-}
-
-.edit-div a:hover, .log_in-div a:active, .edit-div input:hover, .log_in-div input:active {
-    color : #126D92;
-    text-decoration: none;
-}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+/* ...
+*= require bootstrap
+*= require acme_ui_kit
+*= require main
+*= require day
+*/

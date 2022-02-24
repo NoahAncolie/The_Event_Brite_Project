@@ -1,0 +1,14 @@
+<a href="/event/<%=@event_id%>/edit"> edit </a>
+
+<%Attendance.all.each do |attendance|%>
+    <%if @event_id.to_i == attendance.event_id.to_i%>
+        <%@participant = User.find(attendance.participant_id)%>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%=@participant.first_name%></h5>
+                <h6 class="card-subtitle mb-2 text-muted"><%=@participant.email%></h6>
+                <p class="card-text"><%=@participant.description%></p>
+            </div>
+        </div>
+    <%end%>
+<%end%>

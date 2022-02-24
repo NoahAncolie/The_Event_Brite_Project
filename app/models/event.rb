@@ -7,8 +7,8 @@ class Event < ApplicationRecord
     validates :description, length: {minimum:20, maximum:1000}, presence: true
     validates :price, presence: true
 
-    has_many :participations
-    has_many :participants, class_name: "User", through: :participations
+    has_many :attendances
+    has_many :participants, class_name: "User", through: :attendances
     belongs_to :admin, class_name: "User"
 
     def right_duration

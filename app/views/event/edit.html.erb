@@ -8,11 +8,11 @@
   </ul>
 </div>
 <% end %>
-<div class="container">
+div class="container">
   <h1 class="display-4" style="margin-top : 10px;">Post your Event</h1>
 </div>
 <div class="container  box-shadow">
-<%= form_with url: "/event", method: :post, class: "form-group" do |f| %>
+<%= form_with url: event_path(@event.id), method: :patch, class: "form-group" do |f| %>
  <%= f.label :title,'Titre' %>
   <%= f.text_field :title, class: "form-control", placeholder: 'Title'%>
   <br>

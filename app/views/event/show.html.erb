@@ -4,6 +4,20 @@
     </div>
     <div class="description">
         <p><%=@event.description%></p>
-        <a href="#" class="btn">Buy tickets</a>
     </div>
 </div>
+<%unless user_signed_in?%>
+    <div>
+        <%= link_to "Sign up to Access event", new_user_registration_path %>
+    </div>
+<%end%>
+<%unless  user_signed_in? && (is_admin || is_participating)%>
+    <div>
+        <a href="/event/<%=@event.id%>/orders/new">Buy Tickets</a>
+    </div>
+<%end%>
+<%if  user_signed_in? && is_admin%>
+    <div>
+        <a href="/event/<%=@event.id%>/attendances">Invited People</a>
+    </div>
+<%end%>

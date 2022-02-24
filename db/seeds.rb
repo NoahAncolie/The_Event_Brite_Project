@@ -1,2 +1,2 @@
-User.create(email: "adrien.benaceur@gmail.com", password: "passwordAdri", description: "blabla", first_name: "adrien", last_name: "benaceur")
-Event.create(start_date: (Time.now + 2000), duration: 15, title: "Theater", description: "Great awesome", price: 20, location: "Paris", admin_id: 1)
+#User.create(email: "adrien.benaceur@gmail.com", password: "password123", description: "blabla", first_name: "adrien", last_name: "benaceur")
+Event.create(start_date: (Time.now + 2000), duration: 15, title: "The Lullaby", description: "Great awesome Spectacle, full of Wonders for adultz and children", price: 20, location: "Paris", admin_id: 2)

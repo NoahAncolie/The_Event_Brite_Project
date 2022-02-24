@@ -1,4 +1,11 @@
 <div class="user-interface">
-    <%=current_user.first_name%>
-    <p>Here will be all infos about current User</p>
+    <div class="box-shadow container" style="margin-top : 20px;">
+        <h3 class="card-header text-center"><%= @user.first_name %> <%= @user.last_name %></h3>
+        <div class="container col-8 p-4">
+            <h5 class="card-title text-center"><%= @user.email %></h5>
+            <p class="card-body"> 
+                <%= @user.description %>
+            </p>
+        </div>
+    </div>
 </div>

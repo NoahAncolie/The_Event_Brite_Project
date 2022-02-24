@@ -200,6 +200,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stripe (5.44.0)
     table_print (1.5.7)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -251,6 +252,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  stripe
   table_print
   therubyracer
   turbolinks (~> 5)
